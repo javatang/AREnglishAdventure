@@ -20,8 +20,10 @@ namespace Vuforia
     
         #endregion // PRIVATE_MEMBER_VARIABLES
 
-		public GameObject virtualObj;
+		#region AR_OBJECTS
+		public GameObject ARGameObject;
 
+		#endregion // AR_OBJECTS
 
         #region UNTIY_MONOBEHAVIOUR_METHODS
     
@@ -85,7 +87,9 @@ namespace Vuforia
             }
 
             Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " found");
-			virtualObj.SetActive (true);
+
+			ARGameObject.SetActive (true);
+
         }
 
 
@@ -107,7 +111,8 @@ namespace Vuforia
             }
 
             Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " lost");
-			virtualObj.SetActive (false);
+
+			ARGameObject.SetActive (false);
         }
 
         #endregion // PRIVATE_METHODS

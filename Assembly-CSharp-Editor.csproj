@@ -54,16 +54,21 @@
      <None Include="Assets\Vuforia\Shaders\ColoredLines.shader" />
      <None Include="Assets\Vuforia\link.xml" />
      <None Include="Assets\Vuforia\Shaders\VertexLitWithZ.shader" />
+     <None Include="Assets\Resources\XHModel\Shader\PlayerShader.shader" />
      <None Include="Assets\Vuforia\Shaders\RenderVideoBackground.shader" />
+     <None Include="Assets\Resources\XHModel\Shader\MonsterShader.shader" />
      <None Include="Assets\Vuforia\Shaders\VideoBackground.shader" />
      <None Include="Assets\Vuforia\Editor\WebcamProfiles\profiles.xml" />
+     <None Include="Assets\Resources\XHModel\Shader\MogoFakeLight.shader" />
      <None Include="Assets\Vuforia\Shaders\DepthMask.shader" />
+     <None Include="Assets\Resources\XHModel\Enemy\Masked Orc\Read Me.txt" />
      <None Include="Assets\Vuforia\license_3rdpartynotice.txt" />
      <None Include="Assets\Vuforia\readme_SDK.txt" />
+     <None Include="Assets\StreamingAssets\QCAR\AREnglishAdventure.xml" />
      <None Include="Assets\Vuforia\Shaders\ClippingMask.shader" />
      <None Include="Assets\Vuforia\Shaders\BrightTexture.shader" />
      <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
-     <None Include="Assets\StreamingAssets\QCAR\AREnglishAdventure.xml" />
+     <None Include="Assets\Resources\XHTexture\TransparentShader.shader" />
      <None Include="Assets\Vuforia\Shaders\Text3D.shader" />
  <Reference Include="Assembly-UnityScript">
  <HintPath>/Users/xinhoujiang/Desktop/Git/AREnglishAdventure/Library/ScriptAssemblies/Assembly-UnityScript.dll</HintPath>
