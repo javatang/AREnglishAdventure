@@ -46,7 +46,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Resources\XHModel\Merchant_female\scirpt\characterRotate.cs" />
+     <Compile Include="Assets\Resources\Model\Merchant_female\scirpt\characterRotate.cs" />
+     <Compile Include="Assets\Scripts\GameMap\MovieCamera.cs" />
+     <Compile Include="Assets\Scripts\GameMap\UIManager.cs" />
      <Compile Include="Assets\Vuforia\Scripts\BackgroundPlaneBehaviour.cs" />
      <Compile Include="Assets\Vuforia\Scripts\CloudRecoBehaviour.cs" />
      <Compile Include="Assets\Vuforia\Scripts\CylinderTargetBehaviour.cs" />
@@ -83,23 +85,25 @@
      <Compile Include="Assets\Vuforia\Scripts\WireframeTrackableEventHandler.cs" />
      <Compile Include="Assets\Vuforia\Scripts\WordBehaviour.cs" />
      <None Include="Assets\Vuforia\Shaders\ColoredLines.shader" />
+     <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-Basic.shader" />
      <None Include="Assets\Vuforia\link.xml" />
      <None Include="Assets\Vuforia\Shaders\VertexLitWithZ.shader" />
-     <None Include="Assets\Resources\XHModel\Shader\PlayerShader.shader" />
+     <None Include="Assets\Resources\Model\Shader\PlayerShader.shader" />
      <None Include="Assets\Vuforia\Shaders\RenderVideoBackground.shader" />
-     <None Include="Assets\Resources\XHModel\Shader\MonsterShader.shader" />
+     <None Include="Assets\Resources\Model\Shader\MonsterShader.shader" />
      <None Include="Assets\Vuforia\Shaders\VideoBackground.shader" />
      <None Include="Assets\Vuforia\Editor\WebcamProfiles\profiles.xml" />
-     <None Include="Assets\Resources\XHModel\Shader\MogoFakeLight.shader" />
+     <None Include="Assets\Resources\Model\Shader\MogoFakeLight.shader" />
      <None Include="Assets\Vuforia\Shaders\DepthMask.shader" />
-     <None Include="Assets\Resources\XHModel\Enemy\Masked Orc\Read Me.txt" />
+     <None Include="Assets\Standard Assets\Water (Basic)\Sources\Shaders\FX-Water Simple.shader" />
+     <None Include="Assets\Resources\Model\Enemy\Masked Orc\Read Me.txt" />
      <None Include="Assets\Vuforia\license_3rdpartynotice.txt" />
      <None Include="Assets\Vuforia\readme_SDK.txt" />
      <None Include="Assets\StreamingAssets\QCAR\AREnglishAdventure.xml" />
      <None Include="Assets\Vuforia\Shaders\ClippingMask.shader" />
      <None Include="Assets\Vuforia\Shaders\BrightTexture.shader" />
      <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
-     <None Include="Assets\Resources\XHTexture\TransparentShader.shader" />
+     <None Include="Assets\Resources\Texture\TransparentShader.shader" />
      <None Include="Assets\Vuforia\Shaders\Text3D.shader" />
  <Reference Include="UnityEngine.Analytics">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
@@ -122,6 +126,10 @@
  <Reference Include="Vuforia.UnityExtensions">
  <HintPath>/Users/xinhoujiang/Desktop/Git/AREnglishAdventure/Assets/Vuforia/Scripts/Internal/Vuforia.UnityExtensions.dll</HintPath>
  </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{642BAB7F-E4E5-33E6-2361-B0D0BE8F713B}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
