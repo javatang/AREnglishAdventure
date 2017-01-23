@@ -1,7 +1,0 @@
-<linker>
-	<assembly fullname="Assembly-CSharp">
-		<type fullname="UIManager">
-			<method name="EventEnterAR"/>
-		</type>
-	</assembly>
-</linker>

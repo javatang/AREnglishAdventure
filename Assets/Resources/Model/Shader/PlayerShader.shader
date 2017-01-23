@@ -77,17 +77,17 @@ struct Input {
 void separateSH (inout appdata_full v, out Input o)
 {
 	float3 worldN = mul ((float3x3)unity_ObjectToWorld, SCALED_NORMAL);
-	//o.normal = v.normal;
+	o.normal = v.normal;
 	o.shOcclusionAndAmbient = ShadeSH9 (float4(worldN,1.0));
 }
 
 void surf (Input IN, inout MySurfaceOutput o) {
 	fixed4 tex = tex2D(_MainTex, IN.uv_MainTex);
 	o.Albedo = tex.rgb;
-//o.Albedo = (tex.r+tex.g+tex.b)*0.3*tex2D(_Layer1Tex,IN.uv_MainTex)*tex2D(_Layer1Tex,IN.uv_MainTex)*0.8;
+    o.Albedo = (tex.r+tex.g+tex.b)*0.3*tex2D(_Layer1Tex,IN.uv_MainTex)*tex2D(_Layer1Tex,IN.uv_MainTex)*0.8;
 	o.Gloss = tex.a;
 	o.Alpha = tex.a;
-	//o.Normal = IN.normal;
+	o.Normal = IN.normal;
 	o.OcclusionAndAmbientLight = IN.shOcclusionAndAmbient;
 }
 ENDCG
