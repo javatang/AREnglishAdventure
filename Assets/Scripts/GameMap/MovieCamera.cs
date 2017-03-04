@@ -1,18 +1,18 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class MovieCamera : MonoBehaviour
 {
-
-	public GameObject EnterARButton;
-
+	public Image UIBackground;
+	public GameObject player;
 	public float speed = 10;
-	private float endZ = -20;
+	private float endZ = 50;
 
 	// Use this for initialization
 	void Start ()
 	{
-	
+		UIManager.Ins.hideUI ();
 	}
 	
 	// Update is called once per frame
@@ -20,8 +20,13 @@ public class MovieCamera : MonoBehaviour
 	{
 		if (transform.position.z < endZ) {
 			transform.Translate (Vector3.forward * speed * Time.deltaTime);
+
+			Color oldColor = UIBackground.color;
+			UIBackground.color = new Color(oldColor.r, oldColor.g, oldColor.b, oldColor.a-0.01f);
 		} else {
-			EnterARButton.SetActive (true);
+			//UIManager.Ins.showUI ();
+			player.SetActive(true);
+			UIBackground.color = new Color(0, 0, 0, 0);
 		}
 	}
 }

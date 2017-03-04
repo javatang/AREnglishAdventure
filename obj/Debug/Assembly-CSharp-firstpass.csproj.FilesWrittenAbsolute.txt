@@ -20,3 +20,4 @@
 /Users/xinhoujiang/Desktop/Git/AREnglishAdventure/Temp/bin/Debug/Unity.CecilTools.dll
 /Users/xinhoujiang/Desktop/Git/AREnglishAdventure/Temp/bin/Debug/Mono.Cecil.Pdb.dll
 /Users/xinhoujiang/Desktop/Git/AREnglishAdventure/Temp/bin/Debug/Mono.Cecil.Mdb.dll
+/Users/xinhoujiang/Desktop/Git/AREnglishAdventure/Temp/bin/Debug/LitJson.dll

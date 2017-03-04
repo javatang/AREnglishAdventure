@@ -22,3 +22,4 @@
 /Users/xinhoujiang/Desktop/Git/AREnglishAdventure/Temp/bin/Debug/Mono.Cecil.Mdb.dll
 /Users/xinhoujiang/Desktop/Git/AREnglishAdventure/Temp/bin/Debug/Assembly-CSharp-firstpass.dll
 /Users/xinhoujiang/Desktop/Git/AREnglishAdventure/Temp/bin/Debug/Assembly-CSharp-firstpass.dll.mdb
+/Users/xinhoujiang/Desktop/Git/AREnglishAdventure/Temp/bin/Debug/LitJson.dll

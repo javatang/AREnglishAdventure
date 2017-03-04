@@ -142,6 +142,14 @@
      <Compile Include="Assets\IGSoft_Tools\FXMaker\ToolScript\ToolScript\FxmPopup_Transform.cs" />
      <Compile Include="Assets\IGSoft_Tools\FXMaker\ToolScript\ToolScript\FxmSpritePopup.cs" />
      <Compile Include="Assets\IGSoft_Tools\FXMakerReplayScene\FxmReplayDemo.cs" />
+     <Compile Include="Assets\JXHToolKit\Scripts\BlinkEffect.cs" />
+     <Compile Include="Assets\JXHToolKit\Scripts\CameraControl.cs" />
+     <Compile Include="Assets\JXHToolKit\Scripts\CameraShake.cs" />
+     <Compile Include="Assets\JXHToolKit\Scripts\DontDestroyThis.cs" />
+     <Compile Include="Assets\JXHToolKit\Scripts\JsonReader.cs" />
+     <Compile Include="Assets\JXHToolKit\Scripts\ShowFPS.cs" />
+     <Compile Include="Assets\JXHToolKit\Scripts\Singleton.cs" />
+     <Compile Include="Assets\JXHToolKit\Standard Assets\Character Controllers\Sources\Scripts\MouseLook.cs" />
      <Compile Include="Assets\Resources\Model\Merchant_female\scirpt\characterRotate.cs" />
      <Compile Include="Assets\Scripts\GameMap\MovieCamera.cs" />
      <Compile Include="Assets\Scripts\GameMap\UIManager.cs" />
@@ -189,6 +197,7 @@
      <None Include="Assets\Vuforia\Shaders\VertexLitWithZ.shader" />
      <None Include="Assets\Resources\Model\Shader\PlayerShader.shader" />
      <None Include="Assets\Vuforia\Shaders\RenderVideoBackground.shader" />
+     <None Include="Assets\JXHToolKit\Standard Assets\Skyboxes\_skybox info.txt" />
      <None Include="Assets\IGSoft_Resources\ToolResources\EffectShader\FXMaker_Mask Additive.shader" />
      <None Include="Assets\Resources\Model\Shader\MonsterShader.shader" />
      <None Include="Assets\Vuforia\Shaders\VideoBackground.shader" />
@@ -213,6 +222,9 @@
      <None Include="Assets\IGSoft_Resources\ToolResources\EffectShader\FXMaker_Mask Alpha Blended Tint.shader" />
      <None Include="Assets\IGSoft_Tools\FXMaker\ToolResource\EditorShader\LineBackground.shader" />
      <None Include="Assets\Vuforia\Shaders\Text3D.shader" />
+ <Reference Include="UnityEngine.Purchasing">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityPurchasing/UnityEngine.Purchasing.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEngine.Analytics">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
  </Reference>
@@ -225,11 +237,17 @@
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
+ <Reference Include="UnityEngine.Advertisements">
+ <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/Advertisements/UnityEngine.Advertisements.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEngine.HoloLens">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.VR">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
+ </Reference>
+ <Reference Include="LitJson">
+ <HintPath>/Users/xinhoujiang/Desktop/Git/AREnglishAdventure/Assets/Plugins/LitJson.dll</HintPath>
  </Reference>
  <Reference Include="Vuforia.UnityExtensions">
  <HintPath>/Users/xinhoujiang/Desktop/Git/AREnglishAdventure/Assets/Vuforia/Scripts/Internal/Vuforia.UnityExtensions.dll</HintPath>
