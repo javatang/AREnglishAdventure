@@ -10,14 +10,12 @@ public class MovieCamera : MonoBehaviour
 	private float endZ = 50;
 
 	// Use this for initialization
-	void Start ()
-	{
+	void Start () {
 		UIManager.Ins.hideUI ();
 	}
 	
 	// Update is called once per frame
-	void Update ()
-	{
+	void Update () {
 		if (transform.position.z < endZ) {
 			transform.Translate (Vector3.forward * speed * Time.deltaTime);
 
@@ -26,7 +24,9 @@ public class MovieCamera : MonoBehaviour
 		} else {
 			//UIManager.Ins.showUI ();
 			player.SetActive(true);
-			UIBackground.color = new Color(0, 0, 0, 0);
+			UIBackground.gameObject.SetActive (false);
+			//UIBackground.color = new Color(0, 0, 0, 0);
+			gameObject.SetActive (false);
 		}
 	}
 }

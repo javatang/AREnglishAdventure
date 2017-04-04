@@ -3,14 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.AI;
 
 public class UIManager : Singleton<UIManager> {
 
-	public GameObject player;
+	public PlayerController player;
 	public GameObject UIContainer;
 
 	// Use this for initialization
 	void Start () {
+		
 	}
 	
 	// Update is called once per frame
@@ -33,7 +35,12 @@ public class UIManager : Singleton<UIManager> {
 
 	// 进入菜单场景
 	public void EventEnterMap () {
-		player.SetActive (true);
+		player.gameObject.SetActive(true);
 		hideUI ();
+	}
+
+	//  寻路到目的地
+	public void NavToPoint(Vector3 destination) {
+		player.NavToDestination (destination);
 	}
 }
