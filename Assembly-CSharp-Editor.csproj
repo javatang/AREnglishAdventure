@@ -114,7 +114,6 @@
      <None Include="Assets\Vuforia\Shaders\BrightTexture.shader" />
      <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
      <None Include="Assets\IGSoft_Tools\FXMaker\ToolResource\EditorShader\LineColoredBlended.shader" />
-     <None Include="Assets\Resources\Texture\TransparentShader.shader" />
      <None Include="Assets\IGSoft_Resources\ToolResources\EffectShader\FXMaker_Mask Alpha Blended Tint.shader" />
      <None Include="Assets\IGSoft_Tools\FXMaker\ToolResource\EditorShader\LineBackground.shader" />
      <None Include="Assets\Vuforia\Shaders\Text3D.shader" />
