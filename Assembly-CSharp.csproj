@@ -151,6 +151,7 @@
      <Compile Include="Assets\JXHToolKit\Scripts\Singleton.cs" />
      <Compile Include="Assets\JXHToolKit\Standard Assets\Character Controllers\Sources\Scripts\MouseLook.cs" />
      <Compile Include="Assets\Resources\Model\Merchant_female\scirpt\characterRotate.cs" />
+     <Compile Include="Assets\Scripts\GameMap\EnterPoint.cs" />
      <Compile Include="Assets\Scripts\GameMap\MovieCamera.cs" />
      <Compile Include="Assets\Scripts\GameMap\NavButton.cs" />
      <Compile Include="Assets\Scripts\GameMap\PlayerController.cs" />

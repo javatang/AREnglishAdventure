@@ -7,7 +7,7 @@ public class MovieCamera : MonoBehaviour
 	public Image UIBackground;
 	public GameObject player;
 	public float speed = 10;
-	private float endZ = 50;
+	private float endZ = 57;
 
 	// Use this for initialization
 	void Start () {
