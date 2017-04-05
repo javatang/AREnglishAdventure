@@ -17,7 +17,10 @@ public class UIManager : Singleton<UIManager> {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		if (Input.GetKeyDown (KeyCode.Mouse0)) {
+			player.gameObject.SetActive (false);
+			player.gameObject.SetActive (true);
+		}
 	}
 
 	// 进入AR场景
