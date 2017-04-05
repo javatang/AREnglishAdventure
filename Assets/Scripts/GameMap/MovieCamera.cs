@@ -5,13 +5,11 @@ using UnityEngine.UI;
 public class MovieCamera : MonoBehaviour
 {
 	public Image UIBackground;
-	public GameObject player;
 	public float speed = 10;
-	private float endZ = 57;
+	private float endZ = 59;
 
 	// Use this for initialization
 	void Start () {
-		UIManager.Ins.hideUI ();
 	}
 	
 	// Update is called once per frame
@@ -22,10 +20,8 @@ public class MovieCamera : MonoBehaviour
 			Color oldColor = UIBackground.color;
 			UIBackground.color = new Color(oldColor.r, oldColor.g, oldColor.b, oldColor.a-0.01f);
 		} else {
-			//UIManager.Ins.showUI ();
-			player.SetActive(true);
 			UIBackground.gameObject.SetActive (false);
-			//UIBackground.color = new Color(0, 0, 0, 0);
+			UIManager.Ins.EventEnterMap();
 			gameObject.SetActive (false);
 		}
 	}

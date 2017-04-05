@@ -20,23 +20,15 @@ public class UIManager : Singleton<UIManager> {
 		
 	}
 
-	public void hideUI () {
-		//UIManager.Ins.UIContainer.SetActive (false);
-	}
-	public void showUI () {
-		UIManager.Ins.UIContainer.SetActive (true);
-	}
-
 	// 进入AR场景
 	public void EventEnterAR () {
 		SceneManager.LoadScene("GameAR");
-		//Application.LoadLevel ("GameAR");
 	}
 
 	// 进入菜单场景
 	public void EventEnterMap () {
 		player.gameObject.SetActive(true);
-		hideUI ();
+		UIContainer.SetActive (true);
 	}
 
 	//  寻路到目的地
