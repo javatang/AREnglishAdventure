@@ -2,9 +2,9 @@
 Unity generated
 ===============
 #Assets/
-ProjectSettings/*
-Temp/*
-Library/*
+ProjectSettings/
+Temp/
+Library/
 =====================================
 Visual Studio / MonoDevelop generated
 =====================================

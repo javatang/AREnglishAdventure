@@ -23,3 +23,5 @@
 /Users/xinhoujiang/Desktop/Git/AREnglishAdventure/Temp/bin/Debug/Assembly-CSharp-firstpass.dll
 /Users/xinhoujiang/Desktop/Git/AREnglishAdventure/Temp/bin/Debug/Assembly-CSharp-firstpass.dll.mdb
 /Users/xinhoujiang/Desktop/Git/AREnglishAdventure/Temp/bin/Debug/LitJson.dll
+/Users/xinhoujiang/Desktop/Git/AREnglishAdventure/Temp/bin/Debug/UnityEngine.Purchasing.dll
+/Users/xinhoujiang/Desktop/Git/AREnglishAdventure/Temp/bin/Debug/UnityEngine.Advertisements.dll

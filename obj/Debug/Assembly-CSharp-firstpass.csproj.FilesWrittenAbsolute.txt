@@ -21,3 +21,5 @@
 /Users/xinhoujiang/Desktop/Git/AREnglishAdventure/Temp/bin/Debug/Mono.Cecil.Pdb.dll
 /Users/xinhoujiang/Desktop/Git/AREnglishAdventure/Temp/bin/Debug/Mono.Cecil.Mdb.dll
 /Users/xinhoujiang/Desktop/Git/AREnglishAdventure/Temp/bin/Debug/LitJson.dll
+/Users/xinhoujiang/Desktop/Git/AREnglishAdventure/Temp/bin/Debug/UnityEngine.Purchasing.dll
+/Users/xinhoujiang/Desktop/Git/AREnglishAdventure/Temp/bin/Debug/UnityEngine.Advertisements.dll

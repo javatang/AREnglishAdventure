@@ -1,0 +1,14 @@
+<linker>
+	<assembly fullname="Assembly-CSharp">
+		<type fullname="NavButton">
+			<method name="OnClick"/>
+			<method name="OnClick"/>
+			<method name="OnClick"/>
+			<method name="OnClick"/>
+			<method name="OnClick"/>
+		</type>
+		<type fullname="UIManager">
+			<method name="EventEnterMap"/>
+		</type>
+	</assembly>
+</linker>
