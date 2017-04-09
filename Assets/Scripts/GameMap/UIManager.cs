@@ -8,8 +8,8 @@ using System.Runtime.InteropServices;
 
 public class UIManager : Singleton<UIManager> {
 
-	public PlayerController player;
-	private GameObject model;
+
+
 	public GameObject UIContainer;
 
 	// Use this for initialization
@@ -23,37 +23,32 @@ public class UIManager : Singleton<UIManager> {
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetKeyDown (KeyCode.Mouse0)) {
-			if(!model) model = GameObject.FindGameObjectWithTag("fairy");
-			ReActive (model);
+			PlayerController.Ins.ReActive ();
 		}
-	}
-
-	// 动画重播
-	void ReActive(GameObject obj) {
-		obj.SetActive (false);
-		obj.SetActive (true);
-		#if UNITY_EDITOR
-		#else
-		XFState ("Wow! Wellcom to this magical world!");
-		#endif
 	}
 
 	// 进入AR场景
 	public void EventEnterAR () {
 		SceneManager.LoadScene("GameAR");
-		model = GameObject.FindGameObjectWithTag("fairy");
 	}
 
 	// 进入菜单场景
 	public void EventEnterMap () {
-		player.gameObject.SetActive(true);
-		model = GameObject.FindGameObjectWithTag("fairy");
 		UIContainer.SetActive (true);
+		PlayerController.Ins.ReActive ();
 	}
 
 	//  寻路到目的地
 	public void NavToPoint(Vector3 destination) {
-		player.NavToDestination (destination);
+		PlayerController.Ins.NavToDestination (destination);
+	}
+
+	// Speak
+	public void UnityState(string content) {
+		XFState (content);
+	}
+	public void UnitySpeak(string people, string content) {
+		XFSpeak (people, content);
 	}
 
 	//引入内部动态链接库函数  
