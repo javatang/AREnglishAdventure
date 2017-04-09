@@ -59,6 +59,8 @@ public class UIManager : Singleton<UIManager> {
 	//引入内部动态链接库函数  
 	[DllImport("__Internal")]
 	public static extern void XFInitWithAppID (string appid);
-	public static extern void XFSpeak (string people, string content);  
+	[DllImport("__Internal")]
+	public static extern void XFSpeak (string people, string content);
+	[DllImport("__Internal")]
 	public static extern void XFState (string content);
 }
