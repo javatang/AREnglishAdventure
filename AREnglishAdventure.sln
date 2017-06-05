@@ -1,11 +1,11 @@
+﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2008
-
-Project("{E285E2CD-464A-D23C-1FD0-A9D404F2FE46}") = "AREnglishAdventure", "Assembly-CSharp-firstpass.csproj", "{642BAB7F-E4E5-33E6-2361-B0D0BE8F713B}"
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AREnglishAdventure", "Assembly-CSharp-firstpass.csproj", "{642BAB7F-E4E5-33E6-2361-B0D0BE8F713B}"
 EndProject
-Project("{E285E2CD-464A-D23C-1FD0-A9D404F2FE46}") = "AREnglishAdventure", "Assembly-CSharp.csproj", "{435B453D-26DE-89DE-CAF9-DCD8C41E9886}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AREnglishAdventure", "Assembly-CSharp.csproj", "{435B453D-26DE-89DE-CAF9-DCD8C41E9886}"
 EndProject
-Project("{E285E2CD-464A-D23C-1FD0-A9D404F2FE46}") = "AREnglishAdventure", "Assembly-CSharp-Editor.csproj", "{085A0798-D73A-7F7B-8C18-8D3078931A02}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AREnglishAdventure", "Assembly-CSharp-Editor.csproj", "{085A0798-D73A-7F7B-8C18-8D3078931A02}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

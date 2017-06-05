@@ -1,3 +1,5 @@
+// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
 Shader "Mogo/FakeLight" {
     Properties {
         _Color ("Main Color", Color) = (1,1,1,1)
@@ -47,7 +49,7 @@ Shader "Mogo/FakeLight" {
                 v2f vert (appdata_base v) {
 
                     v2f o;
-                    o.pos = mul (UNITY_MATRIX_MVP, v.vertex);
+                    o.pos = UnityObjectToClipPos (v.vertex);
 
                     float3 viewDir = normalize(ObjSpaceViewDir(v.vertex));
                     float dotProduct = 1.0 - saturate(dot(v.normal,viewDir ));
