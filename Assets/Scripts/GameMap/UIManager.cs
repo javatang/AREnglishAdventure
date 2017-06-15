@@ -8,34 +8,34 @@ using System.Runtime.InteropServices;
 
 public class UIManager : Singleton<UIManager> {
 
-
-
-	public GameObject UIContainer;
-
 	// Use this for initialization
 	void Start () {
-		#if UNITY_EDITOR
-		#else
+		// 讯飞初始化
+		#if !UNITY_EDITOR
 		XFInitWithAppID ("");
+		EventEnterMap();
 		#endif
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyDown (KeyCode.Mouse0)) {
-			PlayerController.Ins.ReActive ();
-		}
+		
 	}
 
-	// 进入AR场景
-	public void EventEnterAR () {
-		SceneManager.LoadScene("GameAR");
+	// 进入AR学院场景
+	public void DelayEnterARSchool () {
+		SceneManager.LoadScene("GameARSchool");
+	}
+
+	// 进入AR战斗场景
+	public void DelayEnterARFight () {
+		SceneManager.LoadScene("GameARFight");
 	}
 
 	// 进入菜单场景
 	public void EventEnterMap () {
-		UIContainer.SetActive (true);
-		PlayerController.Ins.ReActive ();
+		SceneManager.LoadScene ("GameMap");
+		UnitySpeak ("vixying","Hello, wellcome back!");
 	}
 
 	//  寻路到目的地
@@ -45,10 +45,14 @@ public class UIManager : Singleton<UIManager> {
 
 	// Speak
 	public void UnityState(string content) {
+		#if !UNITY_EDITOR
 		XFState (content);
+		#endif
 	}
 	public void UnitySpeak(string people, string content) {
+		#if !UNITY_EDITOR
 		XFSpeak (people, content);
+		#endif
 	}
 
 	//引入内部动态链接库函数  

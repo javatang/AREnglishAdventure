@@ -4,11 +4,11 @@ using UnityEngine;
 using UnityEngine.AI;
 
 public class PlayerController : Singleton<PlayerController> {
-	public Transform Button3DEnterAR;
+	public Transform Button3DEnterARFight;
 	public Transform Button3DEnterA;
 	public Transform Button3DEnterB;
 	public Transform Button3DEnterC;
-	public Transform Button3DEnterD;
+	public Transform Button3DEnterSchool;
 	private NavMeshAgent agent;
 	private Animator animator;
 	private GameObject avatar;
@@ -23,28 +23,44 @@ public class PlayerController : Singleton<PlayerController> {
 
 	// Update is called once per frame
 	void Update () {
+
+		if (Input.GetKeyDown (KeyCode.Mouse0)) {
+			ReActive ();
+		}
 		
 		// 进入AR场景
-		Vector3 p1 = new Vector3(Button3DEnterAR.position.x,0,Button3DEnterAR.position.z);
-		Vector3 p2 = new Vector3 (transform.position.x,0,transform.position.z);
-		float distance = (p1 - p2).magnitude;
-		if (distance < 1.0) {
-			StartCoroutine (DelayEnterAR(2.0f));
-		}
+		Vector2 pARFight = new Vector2(Button3DEnterARFight.position.x,Button3DEnterARFight.position.z);
+		Vector2 pARSchool = new Vector2 (Button3DEnterSchool.position.x, Button3DEnterSchool.position.z);
 
-		// idel
+		Vector2 pCur = new Vector2(transform.position.x,transform.position.z);
+
+		float distanceARFight = (pARFight - pCur).magnitude;
+		float distanceARSchool = (pARSchool - pCur).magnitude;
+
+		// 到达目的地
 		if(isNaving && agent.remainingDistance > 0 && agent.remainingDistance < 0.5) {
+			
 			animator.SetInteger ("Action",-1);
 			isNaving = false;
+
+			// 进入AR战斗场景
+			if (distanceARFight < 1.0) {
+				StartCoroutine (DelayEnterARFight(2.0f));
+			}
+
+			// 进入AR学院场景
+			if (distanceARSchool < 1.0) {
+				StartCoroutine(DelayEnterARSchool(2.0f));
+			}
 		}
 	}
 
 	// gui
 	void OnGUI() {
-		string state = agent.remainingDistance.ToString();//animator.GetInteger ("Action").ToString ();
+		string remainDistance = agent.remainingDistance.ToString();//animator.GetInteger ("Action").ToString ();
 		GUIStyle style = new GUIStyle();
-		style.fontSize = 80;
-		GUI.Button (new Rect(50,50,400,150),"Current state:"+state,style);
+		style.fontSize = 40;
+		GUI.Button (new Rect(50,50,400,150),remainDistance,style);
 	}
 
 	// 寻路
@@ -63,16 +79,17 @@ public class PlayerController : Singleton<PlayerController> {
 		} else {
 			animator.SetInteger ("Action",-1);
 		}
-
-		#if UNITY_EDITOR
-		#else
-		UIManager.Ins.UnityState ("Wow! Wellcom to this magical world!");
-		#endif
 	}
 
-	// 延时进入AR场景
-	public IEnumerator DelayEnterAR (float time) {
+	// 延时进入AR战斗场景
+	public IEnumerator DelayEnterARFight (float time) {
 		yield return new WaitForSeconds (time);
-		UIManager.Ins.EventEnterAR ();
+		UIManager.Ins.DelayEnterARFight ();
+	}
+
+	// 延时进入AR学院场景
+	public IEnumerator DelayEnterARSchool (float time) {
+		yield return new WaitForSeconds (time);
+		UIManager.Ins.DelayEnterARSchool ();
 	}
 }

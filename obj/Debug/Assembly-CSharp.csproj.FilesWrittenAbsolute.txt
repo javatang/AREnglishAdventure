@@ -25,3 +25,5 @@
 /Users/xinhoujiang/Desktop/Git/AREnglishAdventure/Temp/bin/Debug/LitJson.dll
 /Users/xinhoujiang/Desktop/Git/AREnglishAdventure/Temp/bin/Debug/UnityEngine.Purchasing.dll
 /Users/xinhoujiang/Desktop/Git/AREnglishAdventure/Temp/bin/Debug/UnityEngine.Advertisements.dll
+/Users/xinhoujiang/Desktop/Git/AREnglishAdventure/Temp/bin/Debug/UnityEngine.TestRunner.dll
+/Users/xinhoujiang/Desktop/Git/AREnglishAdventure/Temp/bin/Debug/nunit.framework.dll

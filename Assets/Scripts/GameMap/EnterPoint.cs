@@ -16,6 +16,6 @@ public class EnterPoint : MonoBehaviour {
 
 	void OnCollisionEnter(Collision collider) {
 		string name = collider.gameObject.name;
-		StartCoroutine (PlayerController.Ins.DelayEnterAR(2.0f));
+		//StartCoroutine (PlayerController.Ins.DelayEnterAR(2.0f));
 	}
 }
