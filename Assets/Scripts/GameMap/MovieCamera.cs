@@ -4,7 +4,8 @@ using UnityEngine.UI;
 
 public class MovieCamera : MonoBehaviour
 {
-	public Image UIBackground;
+	public Image UIFog;
+	public GameObject EnterButton;
 	public float speed = 10;
 	private float endZ = 53;
 
@@ -17,11 +18,14 @@ public class MovieCamera : MonoBehaviour
 		if (transform.position.z < endZ) {
 			transform.Translate (Vector3.forward * speed * Time.deltaTime);
 
-			Color oldColor = UIBackground.color;
-			UIBackground.color = new Color(oldColor.r, oldColor.g, oldColor.b, oldColor.a-0.01f);
+			Color oldColor = UIFog.color;
+			UIFog.color = new Color(oldColor.r, oldColor.g, oldColor.b, oldColor.a-0.01f);
 		} else {
-			UIBackground.gameObject.SetActive (false);
-			StartCoroutine (DelayEnterGame());
+			UIFog.gameObject.SetActive (false);
+			// 显示欢迎主界面
+			EnterButton.SetActive(true);
+			// 播放欢迎声音
+			UIManager.Ins.UnitySpeak("vixying","Hello,Wellcome back!");
 		}
 	}
 

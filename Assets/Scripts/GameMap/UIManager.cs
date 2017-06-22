@@ -16,11 +16,12 @@ public class UIManager : Singleton<UIManager> {
 		EventEnterMap();
 		#endif
 	}
-	
 	// Update is called once per frame
 	void Update () {
 		
 	}
+
+	/*** 场景切换 ***/
 
 	// 进入AR学院场景
 	public void DelayEnterARSchool () {
@@ -32,11 +33,17 @@ public class UIManager : Singleton<UIManager> {
 		SceneManager.LoadScene("GameARFight");
 	}
 
+
+	/*** 按钮事件 ***/
+
 	// 进入菜单场景
 	public void EventEnterMap () {
 		SceneManager.LoadScene ("GameMap");
-		UnitySpeak ("vixying","Hello, wellcome back!");
+		//UnitySpeak ("vixying","Hello, wellcome back!");
 	}
+
+
+	/*** 接口 ***/
 
 	//  寻路到目的地
 	public void NavToPoint(Vector3 destination) {
