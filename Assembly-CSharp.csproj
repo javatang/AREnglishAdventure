@@ -146,11 +146,11 @@
      <Compile Include="Assets\JXHToolKit\Scripts\CameraControl.cs" />
      <Compile Include="Assets\JXHToolKit\Scripts\CameraShake.cs" />
      <Compile Include="Assets\JXHToolKit\Scripts\DontDestroyThis.cs" />
+     <Compile Include="Assets\JXHToolKit\Scripts\FloatingAnimation.cs" />
      <Compile Include="Assets\JXHToolKit\Scripts\JsonReader.cs" />
      <Compile Include="Assets\JXHToolKit\Scripts\ShowFPS.cs" />
      <Compile Include="Assets\JXHToolKit\Scripts\Singleton.cs" />
      <Compile Include="Assets\JXHToolKit\Standard Assets\Character Controllers\Sources\Scripts\MouseLook.cs" />
-     <Compile Include="Assets\Scripts\Commen\FloatingButton.cs" />
      <Compile Include="Assets\Scripts\Commen\TimerReactive.cs" />
      <Compile Include="Assets\Scripts\GameMap\EnterPoint.cs" />
      <Compile Include="Assets\Scripts\GameMap\MovieCamera.cs" />
@@ -173,6 +173,7 @@
      <None Include="Assets\IGSoft_Tools\Readme\FX Maker VideoGuide Youtube.txt" />
      <None Include="Assets\IGSoft_Tools\FXMaker\ToolScript\Temp\grayShader.shader" />
      <None Include="Assets\IGSoft_Tools\FXMaker\ToolResource\UnityShader\FXMakerGrayscaleEffect.shader" />
+     <None Include="Assets\Plugins\Pixelplacement\iTween\ReadMe!\ReadMe!.txt" />
      <None Include="Assets\IGSoft_Tools\FXMaker\ToolResource\EditorShader\LineColoredBlended.shader" />
      <None Include="Assets\IGSoft_Resources\ToolResources\EffectShader\FXMaker_Mask Alpha Blended Tint.shader" />
      <None Include="Assets\IGSoft_Tools\FXMaker\ToolResource\EditorShader\LineBackground.shader" />

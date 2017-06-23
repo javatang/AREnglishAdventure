@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Game/GameARSchool.unity
+- path: Assets/Scenes/Wellcome.unity
   isLoaded: 1
   isActive: 1

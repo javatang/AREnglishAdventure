@@ -8,6 +8,7 @@ using System.Runtime.InteropServices;
 
 public class UIManager : Singleton<UIManager> {
 
+	#region 脚本生命周期
 	// Use this for initialization
 	void Start () {
 		// 讯飞初始化
@@ -20,36 +21,36 @@ public class UIManager : Singleton<UIManager> {
 	void Update () {
 		
 	}
+	#endregion
 
-	/*** 场景切换 ***/
 
+	#region 场景切换
 	// 进入AR学院场景
 	public void DelayEnterARSchool () {
-		SceneManager.LoadScene("GameARSchool");
+		SceneManager.LoadScene("ARSchool");
 	}
 
 	// 进入AR战斗场景
 	public void DelayEnterARFight () {
-		SceneManager.LoadScene("GameARFight");
+		SceneManager.LoadScene("ARFight");
 	}
+	#endregion
 
 
-	/*** 按钮事件 ***/
-
+	#region 按钮事件
 	// 进入菜单场景
 	public void EventEnterMap () {
-		SceneManager.LoadScene ("GameMap");
+		SceneManager.LoadScene ("NavMap");
 		//UnitySpeak ("vixying","Hello, wellcome back!");
 	}
+	#endregion
 
 
-	/*** 接口 ***/
-
+	#region 接口
 	//  寻路到目的地
 	public void NavToPoint(Vector3 destination) {
 		PlayerController.Ins.NavToDestination (destination);
 	}
-
 	// Speak
 	public void UnityState(string content) {
 		#if !UNITY_EDITOR
@@ -61,6 +62,7 @@ public class UIManager : Singleton<UIManager> {
 		XFSpeak (people, content);
 		#endif
 	}
+	#endregion
 
 	//引入内部动态链接库函数  
 	[DllImport("__Internal")]

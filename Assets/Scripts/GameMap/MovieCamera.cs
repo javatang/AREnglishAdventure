@@ -25,7 +25,7 @@ public class MovieCamera : MonoBehaviour
 			// 显示欢迎主界面
 			EnterButton.SetActive(true);
 			// 播放欢迎声音
-			UIManager.Ins.UnitySpeak("vixying","Hello,Wellcome back!");
+			//UIManager.Ins.UnitySpeak("vixying","Hello,Wellcome back!");
 		}
 	}
 
