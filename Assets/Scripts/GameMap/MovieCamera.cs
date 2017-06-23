@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class MovieCamera : MonoBehaviour
 {
 	public Image UIFog;
-	public GameObject EnterButton;
+	public GameObject UIBG;
 	public float speed = 10;
 	private float endZ = 53;
 
@@ -23,7 +23,7 @@ public class MovieCamera : MonoBehaviour
 		} else {
 			UIFog.gameObject.SetActive (false);
 			// 显示欢迎主界面
-			EnterButton.SetActive(true);
+			UIBG.SetActive(true);
 			// 播放欢迎声音
 			//UIManager.Ins.UnitySpeak("vixying","Hello,Wellcome back!");
 		}

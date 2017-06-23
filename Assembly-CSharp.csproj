@@ -152,6 +152,7 @@
      <Compile Include="Assets\JXHToolKit\Scripts\Singleton.cs" />
      <Compile Include="Assets\JXHToolKit\Standard Assets\Character Controllers\Sources\Scripts\MouseLook.cs" />
      <Compile Include="Assets\Scripts\Commen\TimerReactive.cs" />
+     <Compile Include="Assets\Scripts\Commen\iTweenCloudMove.cs" />
      <Compile Include="Assets\Scripts\GameMap\EnterPoint.cs" />
      <Compile Include="Assets\Scripts\GameMap\MovieCamera.cs" />
      <Compile Include="Assets\Scripts\GameMap\NavButton.cs" />
