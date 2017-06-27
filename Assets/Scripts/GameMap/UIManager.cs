@@ -7,6 +7,8 @@ using UnityEngine.AI;
 using System.Runtime.InteropServices;
 
 public class UIManager : Singleton<UIManager> {
+	
+	public static string scene = null; // 将要加载的场景名
 
 	#region 脚本生命周期
 	// Use this for initialization
@@ -14,7 +16,6 @@ public class UIManager : Singleton<UIManager> {
 		// 讯飞初始化
 		#if !UNITY_EDITOR
 		XFInitWithAppID ("");
-		EventEnterMap();
 		#endif
 	}
 	// Update is called once per frame
@@ -24,29 +25,22 @@ public class UIManager : Singleton<UIManager> {
 	#endregion
 
 
-	#region 场景切换
-	// 进入AR学院场景
-	public void DelayEnterARSchool () {
-		SceneManager.LoadScene("ARSchool");
-	}
-
-	// 进入AR战斗场景
-	public void DelayEnterARFight () {
-		SceneManager.LoadScene("ARFight");
-	}
-	#endregion
-
-
 	#region 按钮事件
-	// 进入菜单场景
-	public void EventEnterMap () {
-		SceneManager.LoadScene ("NavMap");
-		//UnitySpeak ("vixying","Hello, wellcome back!");
-	}
+
 	#endregion
 
 
-	#region 接口
+	#region 对外接口
+	// 异步加载场景
+	public void EnterLoadingScene (string sceneName) {
+		scene = sceneName;
+		SceneManager.LoadScene ("Process");
+	}
+	public void LoadSceneAsyc(string sceneName) {
+		scene = sceneName;
+		StartCoroutine (loadScene ());
+	}
+
 	//  寻路到目的地
 	public void NavToPoint(Vector3 destination) {
 		PlayerController.Ins.NavToDestination (destination);
@@ -61,6 +55,17 @@ public class UIManager : Singleton<UIManager> {
 		#if !UNITY_EDITOR
 		XFSpeak (people, content);
 		#endif
+	}
+	#endregion
+
+	#region 私有函数
+	//注意这里返回值一定是IEnumerator
+	IEnumerator loadScene()
+	{
+		//异步读取场景
+		AsyncOperation async = SceneManager.LoadSceneAsync(scene);
+		//读取完毕后返回， 系统会自动进入C场景
+		yield return async;
 	}
 	#endregion
 

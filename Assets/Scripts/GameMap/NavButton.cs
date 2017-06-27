@@ -18,8 +18,4 @@ public class NavButton : MonoBehaviour {
 	public void OnClick(){
 		UIManager.Ins.NavToPoint (EnterPoint.position);
 	}
-
-	public void OnHome(){
-		UIManager.Ins.EventEnterMap ();
-	}
 }

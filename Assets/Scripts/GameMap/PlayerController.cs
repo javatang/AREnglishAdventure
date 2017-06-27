@@ -45,12 +45,12 @@ public class PlayerController : Singleton<PlayerController> {
 
 			// 进入AR战斗场景
 			if (distanceARFight < 1.0) {
-				StartCoroutine (DelayEnterARFight(2.0f));
+				UIManager.Ins.EnterLoadingScene ("ARFight");
 			}
 
 			// 进入AR学院场景
 			if (distanceARSchool < 1.0) {
-				StartCoroutine(DelayEnterARSchool(2.0f));
+				UIManager.Ins.EnterLoadingScene ("ARSchool");
 			}
 		}
 	}
@@ -79,17 +79,5 @@ public class PlayerController : Singleton<PlayerController> {
 		} else {
 			animator.SetInteger ("Action",-1);
 		}
-	}
-
-	// 延时进入AR战斗场景
-	public IEnumerator DelayEnterARFight (float time) {
-		yield return new WaitForSeconds (time);
-		UIManager.Ins.DelayEnterARFight ();
-	}
-
-	// 延时进入AR学院场景
-	public IEnumerator DelayEnterARSchool (float time) {
-		yield return new WaitForSeconds (time);
-		UIManager.Ins.DelayEnterARSchool ();
 	}
 }

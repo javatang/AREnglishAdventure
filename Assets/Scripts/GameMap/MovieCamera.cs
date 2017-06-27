@@ -28,9 +28,4 @@ public class MovieCamera : MonoBehaviour
 			//UIManager.Ins.UnitySpeak("vixying","Hello,Wellcome back!");
 		}
 	}
-
-	public IEnumerator DelayEnterGame() {
-		yield return new WaitForSeconds (3.0f);
-		UIManager.Ins.EventEnterMap ();
-	}
 }
