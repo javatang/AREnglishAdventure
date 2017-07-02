@@ -7,7 +7,7 @@ public class ARSchoolManager : MonoBehaviour {
 	public Text dialogText;
 	// Use this for initialization
 	void Start () {
-		
+		UIManager.Ins.UnityState ("Wellcome to learn english with us!");
 	}
 	
 	// Update is called once per frame
