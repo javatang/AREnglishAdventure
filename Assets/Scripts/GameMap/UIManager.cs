@@ -50,11 +50,13 @@ public class UIManager : Singleton<UIManager> {
 		#if !UNITY_EDITOR
 		XFState (content);
 		#endif
+		Debug.Log (content);
 	}
 	public void UnitySpeak(string people, string content) {
 		#if !UNITY_EDITOR
 		XFSpeak (people, content);
 		#endif
+		Debug.Log (content);
 	}
 	#endregion
 
