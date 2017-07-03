@@ -71,6 +71,13 @@ public class UIManager : Singleton<UIManager> {
 	}
 	#endregion
 
+	#region iOS回调函数
+	public void IOSMessage(){
+		Debug.Log ("IOS message sucess!");
+		UnityState ("IOS message sucess!");
+	}
+	#endregion
+
 	//引入内部动态链接库函数  
 	[DllImport("__Internal")]
 	public static extern void XFInitWithAppID (string appid);
@@ -78,4 +85,5 @@ public class UIManager : Singleton<UIManager> {
 	public static extern void XFSpeak (string people, string content);
 	[DllImport("__Internal")]
 	public static extern void XFState (string content);
+
 }

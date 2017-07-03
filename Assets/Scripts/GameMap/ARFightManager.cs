@@ -6,7 +6,7 @@ public class ARFightManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+		UIManager.Ins.UnitySpeak ("vixk","Let's fight!");
 	}
 	
 	// Update is called once per frame
