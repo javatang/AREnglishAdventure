@@ -5,8 +5,8 @@ using UnityEngine.AI;
 
 public class PlayerController : Singleton<PlayerController> {
 	public Transform Button3DEnterARFight;
-	public Transform Button3DEnterA;
-	public Transform Button3DEnterB;
+	public Transform Button3DEnterARZoo;
+	public Transform Button3DEnterARPlant;
 	public Transform Button3DEnterC;
 	public Transform Button3DEnterSchool;
 	private NavMeshAgent agent;
@@ -31,11 +31,16 @@ public class PlayerController : Singleton<PlayerController> {
 		// 进入AR场景
 		Vector2 pARFight = new Vector2(Button3DEnterARFight.position.x,Button3DEnterARFight.position.z);
 		Vector2 pARSchool = new Vector2 (Button3DEnterSchool.position.x, Button3DEnterSchool.position.z);
+		Vector2 pARZoo = new Vector2 (Button3DEnterARZoo.position.x, Button3DEnterARZoo.position.z);
+		Vector2 pARPlant = new Vector2 (Button3DEnterARPlant.position.x, Button3DEnterARPlant.position.z);
+
 
 		Vector2 pCur = new Vector2(transform.position.x,transform.position.z);
 
 		float distanceARFight = (pARFight - pCur).magnitude;
 		float distanceARSchool = (pARSchool - pCur).magnitude;
+		float distanceARZoo = (pARZoo - pCur).magnitude;
+		float distanceARPlant = (pARPlant - pCur).magnitude;
 
 		// 到达目的地
 		if(isNaving && agent.remainingDistance > 0 && agent.remainingDistance < 0.5) {
@@ -51,6 +56,16 @@ public class PlayerController : Singleton<PlayerController> {
 			// 进入AR学院场景
 			if (distanceARSchool < 1.0) {
 				UIManager.Ins.EnterLoadingScene ("ARSchool");
+			}
+
+			// 植物园
+			if(distanceARZoo < 1.0) {
+				UIManager.Ins.EnterLoadingScene ("ARZoo");
+			}
+
+			// 动物园
+			if(distanceARPlant < 1.0) {
+				UIManager.Ins.EnterLoadingScene ("ARPlant");
 			}
 		}
 	}

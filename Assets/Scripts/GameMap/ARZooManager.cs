@@ -3,18 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ARSchoolManager : MonoBehaviour {
+public class ARZooManager : MonoBehaviour {
+
 	public Text dialogText;
 	// Use this for initialization
 	void Start () {
-		UIManager.Ins.UnityState ("Wellcome to learn english with me!");
+		
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetKeyDown (KeyCode.Mouse0)) {
 			// 说话
-			UIManager.Ins.UnityState ("adventure");
+			UIManager.Ins.UnityState ("dragon");
+			dialogText.text = "Dragon\n龙";
 		}
 	}
 

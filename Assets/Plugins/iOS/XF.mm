@@ -13,7 +13,7 @@ extern "C" void XFSpeak(const char *people, const char *content) {
 }
 
 extern "C" void XFState(const char *content) {
-    UnitySendMessage("EventManager","IOSMessage","");
+    //UnitySendMessage("EventManager","IOSMessage","");
     [XFSDK xf_AudioSynthesizeOfText:[NSString stringWithUTF8String:content]];
 }
 
