@@ -16,8 +16,8 @@ public class ARPlantManager : MonoBehaviour {
 	void Update () {
 		if (Input.GetKeyDown (KeyCode.Mouse0)) {
 			// 说话
-			UIManager.Ins.UnityState ("dragon");
-			dialogText.text = "Dragon\n龙";
+			UIManager.Ins.UnityState ("banana tree");
+			dialogText.text = "Banana tree\n香蕉树";
 		}
 	}
 
