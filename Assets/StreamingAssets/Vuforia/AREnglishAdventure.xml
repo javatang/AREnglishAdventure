@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget name="zoo_dragon" size="1.000000 0.750000" />
+    <ImageTarget name="zoo_butterfly" size="1.000000 0.706250" />
+    <ImageTarget name="plant_bush" size="1.000000 0.750000" />
+    <ImageTarget name="plant_banana" size="1.000000 0.626562" />
+    <ImageTarget name="card_flyman" size="1.000000 0.539062" />
+    <ImageTarget name="card_flygirl" size="1.000000 0.539062" />
+    <ImageTarget name="card_dragon" size="1.000000 0.539062" />
+    <ImageTarget name="card_dog" size="1.000000 0.539062" />
+    <ImageTarget name="card_bg" size="1.000000 0.539062" />
+  </Tracking>
+</QCARConfig>
