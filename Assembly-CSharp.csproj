@@ -148,6 +148,7 @@
      <Compile Include="Assets\JXHToolKit\Scripts\DontDestroyThis.cs" />
      <Compile Include="Assets\JXHToolKit\Scripts\FloatingAnimation.cs" />
      <Compile Include="Assets\JXHToolKit\Scripts\JsonReader.cs" />
+     <Compile Include="Assets\JXHToolKit\Scripts\ScaleAnimation.cs" />
      <Compile Include="Assets\JXHToolKit\Scripts\ShowFPS.cs" />
      <Compile Include="Assets\JXHToolKit\Scripts\Singleton.cs" />
      <Compile Include="Assets\JXHToolKit\Standard Assets\Character Controllers\Sources\Scripts\MouseLook.cs" />
@@ -174,6 +175,7 @@
      <Compile Include="Assets\Scripts\GameMap\EnterPoint.cs" />
      <Compile Include="Assets\Scripts\GameMap\MovieCamera.cs" />
      <Compile Include="Assets\Scripts\GameMap\NavButton.cs" />
+     <Compile Include="Assets\Scripts\GameMap\NavMapManager.cs" />
      <Compile Include="Assets\Scripts\GameMap\PlayerController.cs" />
      <Compile Include="Assets\Scripts\GameMap\UIManager.cs" />
      <Compile Include="Assets\Vuforia\Scripts\BackgroundPlaneBehaviour.cs" />

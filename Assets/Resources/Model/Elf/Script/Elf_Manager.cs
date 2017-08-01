@@ -43,6 +43,7 @@ public class Elf_Manager : MonoBehaviour {
 		Wand[0].SetActive(true);
 		Pet[0].SetActive(true);
 	}
+	/*
 	void OnGUI() {
 		//char
 		GUI.Label(new Rect(10, 30, 100, 20),"Character ");
@@ -96,8 +97,9 @@ public class Elf_Manager : MonoBehaviour {
 			Reset();
 		}
 	}
+	*/
 	//char
-	private void prevChar()
+	public void prevChar()
 	{
 		iElf--;
 		if(iElf < 0) iElf = ElfChar.Length - 1;
@@ -110,7 +112,7 @@ public class Elf_Manager : MonoBehaviour {
 		}
 		ElfChar [iElf].SetActive (true);
 	}
-	private void nextChar()
+	public void nextChar()
 	{
 		iElf++;
 		if(iElf >= ElfChar.Length) iElf = 0;

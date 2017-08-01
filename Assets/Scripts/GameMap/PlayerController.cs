@@ -74,7 +74,7 @@ public class PlayerController : Singleton<PlayerController> {
 	void OnGUI() {
 		string remainDistance = agent.remainingDistance.ToString();//animator.GetInteger ("Action").ToString ();
 		GUIStyle style = new GUIStyle();
-		style.fontSize = 40;
+		style.fontSize = 30;
 		GUI.Button (new Rect(50,50,400,150),remainDistance,style);
 	}
 
