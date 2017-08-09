@@ -7,6 +7,7 @@
 //
 
 #import "XFSDK.h"
+#import <JXHSDK/SDK.h>
 
 extern "C" void XFSpeak(const char *people, const char *content) {
     [XFSDK xf_AudioSynthesizeOfText:[NSString stringWithUTF8String:content] fromPeople:[NSString stringWithUTF8String:people]];
@@ -19,4 +20,17 @@ extern "C" void XFState(const char *content) {
 
 extern "C" void XFInitWithAppID(const char *appid) {
     [XFSDK xf_AudioInitWithAppID:[NSString stringWithUTF8String:appid]];
+}
+
+extern "C" void XHSDKInitWithAppID(const char *appid){
+    //获取Unity rootviewcontroller
+    UIViewController *unityRootVC = UnityGetGLViewController();
+    //UIView *unityView = UnityGetGLView();
+    [SDK SDKInitWithAppID:[NSString stringWithUTF8String:appid] unityVC:unityRootVC];
+}
+
+extern "C" void XHLogin() {
+    [SDK Login:^(NSInteger result, UserInfo *info) {
+        
+    }];
 }

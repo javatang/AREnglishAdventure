@@ -14,7 +14,7 @@ public class ARSchoolManager : MonoBehaviour {
 	void Update () {
 		if (Input.GetKeyDown (KeyCode.Mouse0)) {
 			// 说话
-			UIManager.Ins.UnitySpeak ("vixq", "Hello, My name is Sapphi. I will be your teacher to help you learning english!");
+			UIManager.Ins.UnityState ("Hello, My name is Sapphi. I will be your teacher to help you learning english!");
 		}
 	}
 

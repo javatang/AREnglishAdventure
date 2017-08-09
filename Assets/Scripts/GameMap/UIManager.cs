@@ -58,6 +58,16 @@ public class UIManager : Singleton<UIManager> {
 		#endif
 		Debug.Log (content);
 	}
+	public void SDKLogin(){
+		#if !UNITY_EDITOR
+		XHLogin ();
+		#endif
+	}
+	public void SDKInitWithAppID(){
+		#if !UNITY_EDITOR
+		XHSDKInitWithAppID ("1234567890");
+		#endif
+	}
 	#endregion
 
 	#region 私有函数
@@ -86,4 +96,8 @@ public class UIManager : Singleton<UIManager> {
 	[DllImport("__Internal")]
 	public static extern void XFState (string content);
 
+	[DllImport("__Internal")]
+	public static extern void XHSDKInitWithAppID (string appid);
+	[DllImport("__Internal")]
+	public static extern void XHLogin ();
 }
