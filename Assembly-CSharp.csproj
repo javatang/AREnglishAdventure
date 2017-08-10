@@ -162,6 +162,7 @@
      <Compile Include="Assets\Resources\Model\UnityChan\Scripts\SceneLoader.cs" />
      <Compile Include="Assets\Resources\Model\UnityChan\Scripts\ThirdPersonCamera.cs" />
      <Compile Include="Assets\Resources\Model\UnityChan\Scripts\UnityChanControlScriptWithRgidBody.cs" />
+     <Compile Include="Assets\Scripts\Commen\Bullet.cs" />
      <Compile Include="Assets\Scripts\Commen\Loading.cs" />
      <Compile Include="Assets\Scripts\Commen\Logo.cs" />
      <Compile Include="Assets\Scripts\Commen\TimerReactive.cs" />
@@ -171,7 +172,6 @@
      <Compile Include="Assets\Scripts\GameMap\ARFightManager.cs" />
      <Compile Include="Assets\Scripts\GameMap\ARManager.cs" />
      <Compile Include="Assets\Scripts\GameMap\ARSchoolManager.cs" />
-     <Compile Include="Assets\Scripts\GameMap\ARZooManager.cs" />
      <Compile Include="Assets\Scripts\GameMap\EnterPoint.cs" />
      <Compile Include="Assets\Scripts\GameMap\MovieCamera.cs" />
      <Compile Include="Assets\Scripts\GameMap\NavButton.cs" />

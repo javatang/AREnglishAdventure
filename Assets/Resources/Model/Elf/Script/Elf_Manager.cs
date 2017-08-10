@@ -111,6 +111,7 @@ public class Elf_Manager : MonoBehaviour {
 			}
 		}
 		ElfChar [iElf].SetActive (true);
+		UIManager.Ins.PlaySoundEffect (0);
 	}
 	public void nextChar()
 	{
@@ -124,6 +125,7 @@ public class Elf_Manager : MonoBehaviour {
 			}
 		}
 		ElfChar [iElf].SetActive (true);
+		UIManager.Ins.PlaySoundEffect (1);
 	}
 	//ani
 	private void prevAni()

@@ -10,6 +10,10 @@ public class UIManager : Singleton<UIManager> {
 	
 	public static string scene = null; // 将要加载的场景名
 
+	public AudioClip[] bg_sounds;
+	public AudioClip[] effect_sounds;
+	private AudioSource audio;
+
 	#region 脚本生命周期
 	// Use this for initialization
 	void Start () {
@@ -17,6 +21,8 @@ public class UIManager : Singleton<UIManager> {
 		#if !UNITY_EDITOR
 		XFInitWithAppID ("");
 		#endif
+
+		audio = GetComponent<AudioSource> ();
 	}
 	// Update is called once per frame
 	void Update () {
@@ -33,6 +39,8 @@ public class UIManager : Singleton<UIManager> {
 	#region 对外接口
 	// 异步加载场景
 	public void EnterLoadingScene (string sceneName) {
+		// 停止背景音乐
+		audio.Stop();
 		scene = sceneName;
 		SceneManager.LoadScene ("Process");
 	}
@@ -45,6 +53,19 @@ public class UIManager : Singleton<UIManager> {
 	public void NavToPoint(Vector3 destination) {
 		PlayerController.Ins.NavToDestination (destination);
 	}
+
+	// 播放背景音乐
+	public void PlayBgMusic(int index) {
+		int i = index % bg_sounds.Length;
+		audio.clip = bg_sounds [i];
+		audio.Play ();
+	}
+	public void PlaySoundEffect(int index) {
+		int i = index % effect_sounds.Length;
+		audio.clip = effect_sounds [i];
+		audio.Play ();
+	}
+
 	// Speak
 	public void UnityState(string content) {
 		#if !UNITY_EDITOR

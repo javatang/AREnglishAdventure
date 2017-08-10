@@ -13,9 +13,12 @@ public class ARSchoolManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetKeyDown (KeyCode.Mouse0)) {
-			// 说话
-			UIManager.Ins.UnityState ("Hello, My name is Sapphi. I will be your teacher to help you learning english!");
 		}
+	}
+
+	public void Speak(){
+		// 说话
+		UIManager.Ins.UnityState ("My name is lily. \rI am the manager of the company!");
 	}
 
 	public void OnHome(){
