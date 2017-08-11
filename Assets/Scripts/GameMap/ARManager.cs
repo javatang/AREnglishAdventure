@@ -32,6 +32,7 @@ namespace Vuforia {
 			TrackableImageTarget curImgTarget = curImageTarget.GetComponent<TrackableImageTarget>();
 			dialogText.text = curImgTarget.obejctComment;
 			UIManager.Ins.UnityState (curImgTarget.objectName);
+			Debug.Log (curImgTarget.objectName);
 		}
 	}
 }

@@ -4,16 +4,19 @@ using UnityEngine;
 
 public class ARFightManager : Singleton<ARFightManager> {
 	public GameObject bulletPrefab;
+	public GameObject target;
 	public Animator animator;
+	public LineRenderer linerender;
 	// Use this for initialization
 	void Start () {
-		//UIManager.Ins.UnityState ("Let's fight together!");
 	}
 
 	// Update is called once per frame
 	void Update () {
+		linerender.SetPosition (0, Camera.main.transform.position);
+		linerender.SetPosition (1, target.transform.position);
+
 		if(Input.GetMouseButtonDown(0)){
-			OnShot ();
 		}
 
 		//获取动画层 0 指Base Layer.

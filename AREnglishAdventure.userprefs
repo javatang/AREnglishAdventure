@@ -1,15 +1,14 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Resources/Model/Elf/Script/Elf_Manager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GameMap/ARSchoolManager.cs">
     <Files>
-      <File FileName="Assets/Scripts/Commen/WellcomManager.cs" Line="13" Column="3" />
-      <File FileName="Assets/Scripts/Commen/Bullet.cs" Line="19" Column="3" />
-      <File FileName="Assets/Scripts/GameMap/ARFightManager.cs" Line="15" Column="14" />
-      <File FileName="Assets/Scripts/GameMap/UIManager.cs" Line="48" Column="3" />
-      <File FileName="Assets/Scripts/GameMap/NavMapManager.cs" Line="12" Column="3" />
-      <File FileName="Assets/Scripts/GameMap/ARManager.cs" Line="28" Column="4" />
-      <File FileName="Assets/Scripts/Commen/TrackableImageTarget.cs" Line="9" Column="41" />
-      <File FileName="Assets/Resources/Model/Elf/Script/Elf_Manager.cs" Line="116" Column="24" />
+      <File FileName="Assets/Scripts/GameMap/ARManager.cs" Line="15" Column="4" />
+      <File FileName="Assets/Scripts/Commen/WellcomManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Commen/Bullet.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/GameMap/ARFightManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/GameMap/UIManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/GameMap/NavMapManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/GameMap/ARSchoolManager.cs" Line="19" Column="8" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
