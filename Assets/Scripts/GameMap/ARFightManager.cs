@@ -33,8 +33,8 @@ public class ARFightManager : Singleton<ARFightManager> {
 	}
 
 	public void OnShot() {
-		UIManager.Ins.PlaySoundEffect (4);
 		GameObject bullet = GameObject.Instantiate (bulletPrefab, Camera.main.transform.position, Camera.main.transform.rotation) as GameObject;
+		UIManager.Ins.PlaySoundEffect (4);
 	}
 
 	public void Pronunication() {

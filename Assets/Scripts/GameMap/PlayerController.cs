@@ -7,7 +7,7 @@ public class PlayerController : Singleton<PlayerController> {
 	public Transform Button3DEnterARFight;
 	public Transform Button3DEnterARZoo;
 	public Transform Button3DEnterARPlant;
-	public Transform Button3DEnterC;
+	public Transform Button3DEnterLBS;
 	public Transform Button3DEnterSchool;
 	private NavMeshAgent agent;
 	private Animator animator;
@@ -33,6 +33,7 @@ public class PlayerController : Singleton<PlayerController> {
 		Vector2 pARSchool = new Vector2 (Button3DEnterSchool.position.x, Button3DEnterSchool.position.z);
 		Vector2 pARZoo = new Vector2 (Button3DEnterARZoo.position.x, Button3DEnterARZoo.position.z);
 		Vector2 pARPlant = new Vector2 (Button3DEnterARPlant.position.x, Button3DEnterARPlant.position.z);
+		Vector2 pLBSMap = new Vector2 (Button3DEnterLBS.position.x, Button3DEnterLBS.position.z);
 
 
 		Vector2 pCur = new Vector2(transform.position.x,transform.position.z);
@@ -41,6 +42,7 @@ public class PlayerController : Singleton<PlayerController> {
 		float distanceARSchool = (pARSchool - pCur).magnitude;
 		float distanceARZoo = (pARZoo - pCur).magnitude;
 		float distanceARPlant = (pARPlant - pCur).magnitude;
+		float distanceLBS = (pLBSMap - pCur).magnitude;
 
 		// 到达目的地
 		if(isNaving && agent.remainingDistance > 0 && agent.remainingDistance < 0.5) {
@@ -66,6 +68,11 @@ public class PlayerController : Singleton<PlayerController> {
 			// 动物园
 			if(distanceARPlant < 1.0) {
 				UIManager.Ins.EnterLoadingScene ("ARPlant");
+			}
+
+			// LBS
+			if(distanceLBS < 1.0) {
+				UIManager.Ins.EnterLoadingScene ("LBSMap");
 			}
 		}
 	}
