@@ -172,10 +172,8 @@
      <Compile Include="Assets\Scripts\GameMap\ARFightManager.cs" />
      <Compile Include="Assets\Scripts\GameMap\ARManager.cs" />
      <Compile Include="Assets\Scripts\GameMap\ARSchoolManager.cs" />
-     <Compile Include="Assets\Scripts\GameMap\EnterPoint.cs" />
      <Compile Include="Assets\Scripts\GameMap\LBSManager.cs" />
      <Compile Include="Assets\Scripts\GameMap\MovieCamera.cs" />
-     <Compile Include="Assets\Scripts\GameMap\NavButton.cs" />
      <Compile Include="Assets\Scripts\GameMap\NavMapManager.cs" />
      <Compile Include="Assets\Scripts\GameMap\PlayerController.cs" />
      <Compile Include="Assets\Scripts\GameMap\UIManager.cs" />
