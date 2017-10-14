@@ -165,6 +165,7 @@
      <Compile Include="Assets\Scripts\Commen\Bullet.cs" />
      <Compile Include="Assets\Scripts\Commen\Loading.cs" />
      <Compile Include="Assets\Scripts\Commen\Logo.cs" />
+     <Compile Include="Assets\Scripts\Commen\PlayerMove.cs" />
      <Compile Include="Assets\Scripts\Commen\TimerReactive.cs" />
      <Compile Include="Assets\Scripts\Commen\TrackableImageTarget.cs" />
      <Compile Include="Assets\Scripts\Commen\WellcomManager.cs" />
@@ -173,6 +174,7 @@
      <Compile Include="Assets\Scripts\GameMap\ARManager.cs" />
      <Compile Include="Assets\Scripts\GameMap\ARSchoolManager.cs" />
      <Compile Include="Assets\Scripts\GameMap\LBSManager.cs" />
+     <Compile Include="Assets\Scripts\GameMap\MenuPlantManager.cs" />
      <Compile Include="Assets\Scripts\GameMap\MovieCamera.cs" />
      <Compile Include="Assets\Scripts\GameMap\NavMapManager.cs" />
      <Compile Include="Assets\Scripts\GameMap\PlayerController.cs" />
