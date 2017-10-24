@@ -16,7 +16,7 @@ namespace Vuforia
     {
         #region PRIVATE_MEMBER_VARIABLES
  
-        private TrackableBehaviour mTrackableBehaviour;
+		protected TrackableBehaviour mTrackableBehaviour;
     
         #endregion // PRIVATE_MEMBER_VARIABLES
 
@@ -53,16 +53,22 @@ namespace Vuforia
             {
                 OnTrackingFound();
 				OnARObjectFound ();
+				OnARTextFound ();
             }
             else
             {
                 OnTrackingLost();
 				OnARObjectLost ();
+				OnARTextLost ();
             }
         }
 
+		// self defined
 		public virtual void OnARObjectFound(){}
 		public virtual void OnARObjectLost(){}
+
+		public virtual void OnARTextFound(){}
+		public virtual void OnARTextLost(){}
 
         #endregion // PUBLIC_METHODS
 

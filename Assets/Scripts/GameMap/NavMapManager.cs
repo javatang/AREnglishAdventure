@@ -51,4 +51,14 @@ public class NavMapManager : MonoBehaviour {
 	public void LBSMap () {
 		UIManager.Ins.EnterLoadingScene ("LBSMap");
 	}
+
+	// ar text
+	public void ARText () {
+		UIManager.Ins.EnterLoadingScene ("ARText");
+	}
+
+	// ar video
+	public void ARVideo () {
+		UIManager.Ins.EnterLoadingScene ("ARVideo");
+	}
 }

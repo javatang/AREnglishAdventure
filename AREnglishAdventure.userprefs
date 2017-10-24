@@ -2,12 +2,23 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GameMap/NavMapManager.cs">
     <Files>
-      <File FileName="Assets/Scripts/GameMap/NavMapManager.cs" Line="10" Column="18" />
+      <File FileName="Assets/Vuforia/Scripts/DefaultTrackableEventHandler.cs" Line="62" Column="21" />
+      <File FileName="Assets/Scripts/Commen/TextRecogLineRender.cs" Line="16" Column="15" />
+      <File FileName="Assets/Scripts/GameMap/NavMapManager.cs" Line="58" Column="3" />
       <File FileName="Assets/Scripts/GameMap/UIManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Commen/TrackableImageTarget.cs" Line="16" Column="4" />
+      <File FileName="Assets/Scripts/Commen/TrackableText.cs" Line="12" Column="4" />
+      <File FileName="Assets/Scripts/GameMap/ARTextManager.cs" Line="21" Column="3" />
+      <File FileName="Assets/Scripts/GameMap/ARSchoolManager.cs" Line="24" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/xinhoujiang/Desktop/Git/AREnglishAdventure/Assets/Scripts/GameMap/ARTextManager.cs" line="24" column="1" />
+      <Breakpoint file="/Users/xinhoujiang/Desktop/Git/AREnglishAdventure/Assets/Scripts/GameMap/ARTextManager.cs" line="28" column="25" />
+      <Breakpoint file="/Users/xinhoujiang/Desktop/Git/AREnglishAdventure/Assets/Scripts/Commen/TrackableText.cs" line="9" column="1" />
+      <Breakpoint file="/Users/xinhoujiang/Desktop/Git/AREnglishAdventure/Assets/Scripts/Commen/TrackableText.cs" line="15" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

@@ -22,6 +22,9 @@ extern "C" void XFInitWithAppID(const char *appid) {
     [XFSDK xf_AudioInitWithAppID:[NSString stringWithUTF8String:appid]];
 }
 
+
+// 登录SDK
+
 extern "C" void XHSDKInitWithAppID(const char *appid){
     //获取Unity rootviewcontroller
     UIViewController *unityRootVC = UnityGetGLViewController();
