@@ -12,7 +12,9 @@ public class UIManager : Singleton<UIManager> {
 
 	public AudioClip[] bg_sounds;
 	public AudioClip[] effect_sounds;
-	private AudioSource audio;
+	public AudioClip[] story_sounds;
+	public AudioClip[] dialog_sounds;
+	private AudioSource audio = null;
 
 	#region 脚本生命周期
 	// Use this for initialization
@@ -50,9 +52,9 @@ public class UIManager : Singleton<UIManager> {
 	}
 
 	//  寻路到目的地
-	public void NavToPoint(Vector3 destination) {
-		PlayerController.Ins.NavToDestination (destination);
-	}
+	//public void NavToPoint(Vector3 destination) {
+	//	PlayerController.Ins.NavToDestination (destination);
+	//}
 
 	// 播放背景音乐
 	public void PlayBgMusic(int index) {
@@ -60,10 +62,36 @@ public class UIManager : Singleton<UIManager> {
 		audio.clip = bg_sounds [i];
 		audio.Play ();
 	}
+	// 播放音效
 	public void PlaySoundEffect(int index) {
 		int i = index % effect_sounds.Length;
 		audio.clip = effect_sounds [i];
 		audio.Play ();
+	}
+	// 播放英语故事
+	public void PlayStory(int index) {
+		int i = index % story_sounds.Length;
+		audio.clip = story_sounds[i];
+		audio.Play ();
+	}
+	// 播放英语对话
+	public void PLayDialog(int index) {
+		int i = index % dialog_sounds.Length;
+		audio.clip = dialog_sounds[i];
+		audio.Play ();
+	}
+
+	// 停止播放
+	public void StopAudioPlay(){
+		audio.Stop ();
+	}
+	// 暂停播放
+	public void PauseAudio(){
+		audio.Pause ();
+	}
+	// 继续播放
+	public void ResumeAudio(){
+		audio.UnPause ();
 	}
 
 	// Speak

@@ -12,8 +12,6 @@ public class NavMapManager : MonoBehaviour {
 	int maxindex=0;
 	// Use this for initialization
 	void Start () {
-		// 背景音乐
-		//UIManager.Ins.PlayBgMusic(1);
 		maxindex = skyboxs.Length;
 	}
 	
@@ -60,5 +58,10 @@ public class NavMapManager : MonoBehaviour {
 	// ar video
 	public void ARVideo () {
 		UIManager.Ins.EnterLoadingScene ("ARVideo");
+	}
+
+	// ar story
+	public void ARStory () {
+		UIManager.Ins.EnterLoadingScene ("ARStory");
 	}
 }
