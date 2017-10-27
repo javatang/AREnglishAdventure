@@ -117,6 +117,11 @@ public class UIManager : Singleton<UIManager> {
 		XHSDKInitWithAppID ("1234567890");
 		#endif
 	}
+	public void AddLBSMap(){
+		#if !UNITY_EDITOR
+		XHLBSMap ();
+		#endif
+	}
 	#endregion
 
 	#region 私有函数
@@ -149,4 +154,6 @@ public class UIManager : Singleton<UIManager> {
 	public static extern void XHSDKInitWithAppID (string appid);
 	[DllImport("__Internal")]
 	public static extern void XHLogin ();
+	[DllImport("__Internal")]
+	public static extern void XHLBSMap ();
 }

@@ -9,7 +9,7 @@ public class ARStoryManager : MonoBehaviour {
 	int storyIndex = 0;
 	// Use this for initialization
 	void Start () {
-		
+		UIManager.Ins.PlayStory (storyIndex);
 	}
 	
 	// Update is called once per frame
