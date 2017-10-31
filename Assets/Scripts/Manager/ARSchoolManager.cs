@@ -7,22 +7,24 @@ using Vuforia;
 public class ARSchoolManager : MonoBehaviour {
 	public Text dialogText;
 	public TrackableImageTarget target;
+	public AudioClip[] dialogs;
+	AudioSource audio = null;
 	// Use this for initialization
 	void Start () {
+		audio = GetComponent<AudioSource> ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		if (target.isARFound) {
-			UIManager.Ins.PLayDialog (0);
 		} else {
-			UIManager.Ins.StopAudioPlay ();
 		}
 	}
 
-	public void Speak(){
+	public void PlayDialog(){
 		// 说话
-		UIManager.Ins.PLayDialog (0);
+		audio.clip = dialogs[0];
+		audio.Play ();
 	}
 
 	public void OnHome(){

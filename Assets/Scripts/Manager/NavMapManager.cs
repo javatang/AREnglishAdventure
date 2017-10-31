@@ -27,7 +27,7 @@ public class NavMapManager : MonoBehaviour {
 
 	// 进入AR战斗场景
 	public void ARFight() {
-		UIManager.Ins.EnterLoadingScene ("ARFight");
+		UIManager.Ins.EnterLoadingScene ("map");
 	}
 
 	// 进入AR学院场景

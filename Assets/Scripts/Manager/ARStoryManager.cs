@@ -7,9 +7,11 @@ public class ARStoryManager : MonoBehaviour {
 
 	public TrackableImageTarget target;
 	int storyIndex = 0;
+	public AudioClip[] stories;
+	AudioSource audio = null;
 	// Use this for initialization
 	void Start () {
-		UIManager.Ins.PlayStory (storyIndex);
+		audio = GetComponent<AudioSource> ();
 	}
 	
 	// Update is called once per frame
@@ -20,6 +22,11 @@ public class ARStoryManager : MonoBehaviour {
 		} else {
 			UIManager.Ins.StopAudioPlay ();
 		}
+	}
+
+	public void PlayStory(){
+		audio.clip = stories[0];
+		audio.Play ();
 	}
 
 	public void OnHome(){

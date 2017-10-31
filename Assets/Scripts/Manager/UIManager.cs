@@ -22,6 +22,7 @@ public class UIManager : Singleton<UIManager> {
 		// 讯飞初始化
 		#if !UNITY_EDITOR
 		XFInitWithAppID ("");
+		XHRecordInit();
 		#endif
 
 		audio = GetComponent<AudioSource> ();
@@ -122,6 +123,30 @@ public class UIManager : Singleton<UIManager> {
 		XHLBSMap ();
 		#endif
 	}
+
+
+	// 录音播放
+	public void XHRecordInit(){
+		#if !UNITY_EDITOR
+		XHAudioRecordInit();
+		#endif
+	}
+	public void XHRecordStart(){
+		#if !UNITY_EDITOR
+		XHAudioRecordStart();
+		#endif
+	}
+	public void XHRecordStop(){
+		#if !UNITY_EDITOR
+		XHAudioRecordStop();
+		#endif
+	}
+	public void XHRecordPlay(){
+		#if !UNITY_EDITOR
+		XHAudioRecordPlay();
+		#endif
+	}
+
 	#endregion
 
 	#region 私有函数
@@ -156,4 +181,19 @@ public class UIManager : Singleton<UIManager> {
 	public static extern void XHLogin ();
 	[DllImport("__Internal")]
 	public static extern void XHLBSMap ();
+
+	// 录音与播放
+	[DllImport("__Internal")]
+	public static extern void XHAudioRecordInit ();
+	[DllImport("__Internal")]
+	public static extern void XHAudioRecordStart ();
+	[DllImport("__Internal")]
+	public static extern void XHAudioRecordStop ();
+	[DllImport("__Internal")]
+	public static extern void XHAudioRecordPause ();
+	[DllImport("__Internal")]
+	public static extern void XHAudioRecordPlay ();
+	[DllImport("__Internal")]
+	public static extern float XHAudioRecordGetPower ();
+
 }

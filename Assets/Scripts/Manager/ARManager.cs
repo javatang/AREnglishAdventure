@@ -8,6 +8,7 @@ namespace Vuforia {
 
 		public Text dialogText;
 		public GameObject curImageTarget;
+		bool isRecording = false;
 
 		// Use this for initialization
 		void Start () {
@@ -17,6 +18,19 @@ namespace Vuforia {
 		// Update is called once per frame
 		void Update () {
 
+		}
+
+		public void AudioRecord(){
+			if (isRecording) {
+				UIManager.Ins.XHRecordStop ();
+			} else {
+				UIManager.Ins.XHRecordStart ();
+			}
+			isRecording = !isRecording;
+		}
+
+		public void AudioPlay(){
+			UIManager.Ins.XHRecordPlay ();
 		}
 
 		public void OnHome(){

@@ -8,7 +8,6 @@ namespace Vuforia{
 		public override void OnARTextFound(){
 			string text = mTrackableBehaviour.TrackableName;
 			ARTextManager.Ins.ARTextFound (text);
-			Debug.Log ("recognized english text:"+text);
 		}
 
 		public override void OnARTextLost(){

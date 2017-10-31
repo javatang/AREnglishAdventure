@@ -163,6 +163,7 @@
      <Compile Include="Assets\Resources\Model\UnityChan\Scripts\ThirdPersonCamera.cs" />
      <Compile Include="Assets\Resources\Model\UnityChan\Scripts\UnityChanControlScriptWithRgidBody.cs" />
      <Compile Include="Assets\Scripts\Commen\Bullet.cs" />
+     <Compile Include="Assets\Scripts\Commen\DragRotate.cs" />
      <Compile Include="Assets\Scripts\Commen\Loading.cs" />
      <Compile Include="Assets\Scripts\Commen\Logo.cs" />
      <Compile Include="Assets\Scripts\Commen\MovieCamera.cs" />
@@ -181,6 +182,7 @@
      <Compile Include="Assets\Scripts\Manager\ARTextManager.cs" />
      <Compile Include="Assets\Scripts\Manager\LBSManager.cs" />
      <Compile Include="Assets\Scripts\Manager\MenuPlantManager.cs" />
+     <Compile Include="Assets\Scripts\Manager\MenuSchoolManager.cs" />
      <Compile Include="Assets\Scripts\Manager\NavMapManager.cs" />
      <Compile Include="Assets\Scripts\Manager\PlayerController.cs" />
      <Compile Include="Assets\Scripts\Manager\UIManager.cs" />
@@ -231,7 +233,6 @@
      <None Include="Assets\Resources\Model\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_eye.shader" />
      <None Include="Assets\IGSoft_Resources\ToolResources\EffectShader\FXMaker_Mask Alpha Blended.shader" />
      <None Include="Assets\IGSoft_Resources\ToolResources\EffectShader\FXMaker_Mask Cutout.shader" />
-     <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
      <None Include="Assets\Resources\Model\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_fuku.shader" />
      <None Include="Assets\Vuforia\Shaders\ColoredLines.shader" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-Basic.shader" />
@@ -239,6 +240,7 @@
      <None Include="Assets\IGSoft_Resources\ToolResources\EffectShader\FXMaker_Mask Additive Tint.shader" />
      <None Include="Assets\Vuforia\link.xml" />
      <None Include="Assets\Vuforia\Shaders\VertexLitWithZ.shader" />
+     <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
      <None Include="Assets\Resources\Model\CactusPack\Shaders\VertexBlend.shader" />
      <None Include="Assets\Resources\Model\Shader\PlayerShader.shader" />
      <None Include="Assets\Toon_Level_Kit\Resources\Shaders\Rim.shader" />
