@@ -21,4 +21,8 @@ public class MenuSchoolManager : MonoBehaviour {
 	public void Back(){
 		UIManager.Ins.EnterLoadingScene ("NavMap");
 	}
+
+	public void STICKHERO(){
+		UIManager.Ins.EnterLoadingScene ("Menu");
+	}
 }

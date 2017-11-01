@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class PlayerController : Singleton<PlayerController> {
+public class ThirdPlayerController : Singleton<ThirdPlayerController> {
 	public Transform Button3DEnterARFight;
 	public Transform Button3DEnterARZoo;
 	public Transform Button3DEnterARPlant;

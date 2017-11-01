@@ -27,12 +27,12 @@ public class NavMapManager : MonoBehaviour {
 
 	// 进入AR战斗场景
 	public void ARFight() {
-		UIManager.Ins.EnterLoadingScene ("map");
+		UIManager.Ins.EnterLoadingScene ("MenuGame");
 	}
 
 	// 进入AR学院场景
 	public void ARSchool () {
-		UIManager.Ins.EnterLoadingScene ("ARSchool");
+		UIManager.Ins.EnterLoadingScene ("MenuSchool");
 	}
 
 	// 植物园

@@ -33,8 +33,12 @@ namespace Vuforia {
 			UIManager.Ins.XHRecordPlay ();
 		}
 
-		public void OnHome(){
-			UIManager.Ins.EnterLoadingScene ("NavMap");
+		public void MenuPlant(){
+			UIManager.Ins.EnterLoadingScene ("MenuPlant");
+		}
+
+		public void MenuZoo(){
+			UIManager.Ins.EnterLoadingScene ("MenuZoo");
 		}
 
 		public void OnAction(){
