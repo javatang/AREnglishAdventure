@@ -7,8 +7,8 @@ namespace Vuforia {
 	public class ARManager : Singleton<ARManager> {
 
 		public Text dialogText;
+		public GameObject recording;
 		public GameObject curImageTarget;
-		bool isRecording = false;
 
 		// Use this for initialization
 		void Start () {
@@ -21,12 +21,12 @@ namespace Vuforia {
 		}
 
 		public void AudioRecord(){
-			if (isRecording) {
-				UIManager.Ins.XHRecordStop ();
+			if (Microphone.IsRecording (null)) {
+				recording.SetActive (true);
 			} else {
-				UIManager.Ins.XHRecordStart ();
+				recording.SetActive (false);
 			}
-			isRecording = !isRecording;
+			UIManager.Ins.XHRecordStart ();
 		}
 
 		public void AudioPlay(){

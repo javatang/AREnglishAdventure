@@ -1,18 +1,10 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Manager/ARVideoManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Vuforia/Scripts/Utilities/VRIntegrationHelper.cs">
     <Files>
-      <File FileName="Assets/Scripts/Manager/MenuSchoolManager.cs" Line="23" Column="3" />
-      <File FileName="Assets/Scripts/Manager/MenuPlantManager.cs" Line="2" Column="34" />
-      <File FileName="Assets/Scripts/Commen/DragRotate.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Manager/ThirdPlayerController.cs" Line="1" Column="1" />
-      <File FileName="Assets/JXHToolKit/Scripts/CameraShake.cs" Line="1" Column="1" />
-      <File FileName="Assets/StickHero/Scripts/Commen/HeroCameraShake.cs" Line="32" Column="41" />
-      <File FileName="Assets/Scripts/Commen/TrackableImageTarget.cs" Line="20" Column="1" />
-      <File FileName="Assets/StickHero/Scripts/MenuScripts/MenuController.cs" Line="57" Column="6" />
-      <File FileName="Assets/Scripts/Manager/NavMapManager.cs" Line="32" Column="2" />
-      <File FileName="Assets/Scripts/Manager/ARManager.cs" Line="39" Column="3" />
-      <File FileName="Assets/Scripts/Manager/ARVideoManager.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Commen/XHMicroPhone.cs" Line="23" Column="1" />
+      <File FileName="Assets/Scripts/Manager/UIManager.cs" Line="187" Column="2" />
+      <File FileName="Assets/Vuforia/Scripts/Utilities/VRIntegrationHelper.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

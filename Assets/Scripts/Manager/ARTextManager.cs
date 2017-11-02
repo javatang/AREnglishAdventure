@@ -8,7 +8,6 @@ public class ARTextManager : Singleton<ARTextManager> {
 
 	public Text text;
 	public ARWord[] wordlist;
-	string curWord;
 	// Use this for initialization
 	void Start () {
 		
@@ -37,6 +36,6 @@ public class ARTextManager : Singleton<ARTextManager> {
 	}
 
 	public void Pronunication(){
-		UIManager.Ins.UnityState (curWord);
+		//UIManager.Ins.UnityState (curWord);
 	}
 }

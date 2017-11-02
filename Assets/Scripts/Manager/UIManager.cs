@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.AI;
 using System.Runtime.InteropServices;
+[RequireComponent(typeof(AudioSource))]
 
 public class UIManager : Singleton<UIManager> {
 	
@@ -14,7 +15,9 @@ public class UIManager : Singleton<UIManager> {
 	public AudioClip[] effect_sounds;
 	public AudioClip[] story_sounds;
 	public AudioClip[] dialog_sounds;
-	private AudioSource audio = null;
+	private AudioSource araudio = null;
+
+	public const int sFrequency = 8000;
 
 	#region 脚本生命周期
 	// Use this for initialization
@@ -22,28 +25,20 @@ public class UIManager : Singleton<UIManager> {
 		// 讯飞初始化
 		#if !UNITY_EDITOR
 		XFInitWithAppID ("");
-		XHRecordInit();
 		#endif
 
-		audio = GetComponent<AudioSource> ();
-	}
-	// Update is called once per frame
-	void Update () {
-		
+		araudio = GetComponent<AudioSource> ();
 	}
 	#endregion
 
-
-	#region 按钮事件
-
-	#endregion
 
 
 	#region 对外接口
+
 	// 异步加载场景
 	public void EnterLoadingScene (string sceneName) {
 		// 停止背景音乐
-		audio.Stop();
+		araudio.Stop();
 		scene = sceneName;
 		SceneManager.LoadScene ("Process");
 	}
@@ -52,48 +47,77 @@ public class UIManager : Singleton<UIManager> {
 		StartCoroutine (loadScene ());
 	}
 
-	//  寻路到目的地
-	//public void NavToPoint(Vector3 destination) {
-	//	PlayerController.Ins.NavToDestination (destination);
-	//}
 
 	// 播放背景音乐
 	public void PlayBgMusic(int index) {
 		int i = index % bg_sounds.Length;
-		audio.clip = bg_sounds [i];
-		audio.Play ();
+		araudio.clip = bg_sounds [i];
+		araudio.Play ();
 	}
 	// 播放音效
 	public void PlaySoundEffect(int index) {
 		int i = index % effect_sounds.Length;
-		audio.clip = effect_sounds [i];
-		audio.Play ();
+		araudio.clip = effect_sounds [i];
+		araudio.Play ();
 	}
 	// 播放英语故事
 	public void PlayStory(int index) {
 		int i = index % story_sounds.Length;
-		audio.clip = story_sounds[i];
-		audio.Play ();
+		araudio.clip = story_sounds[i];
+		araudio.Play ();
 	}
 	// 播放英语对话
 	public void PLayDialog(int index) {
 		int i = index % dialog_sounds.Length;
-		audio.clip = dialog_sounds[i];
-		audio.Play ();
+		araudio.clip = dialog_sounds[i];
+		araudio.Play ();
 	}
-
 	// 停止播放
 	public void StopAudioPlay(){
-		audio.Stop ();
+		araudio.Stop ();
 	}
 	// 暂停播放
 	public void PauseAudio(){
-		audio.Pause ();
+		araudio.Pause ();
 	}
 	// 继续播放
 	public void ResumeAudio(){
-		audio.UnPause ();
+		araudio.UnPause ();
 	}
+
+
+	public void XHRecordStart()
+	{
+		if (Microphone.IsRecording (null)) {
+			Microphone.End(null);
+			araudio.Stop();
+			Debug.Log ("stop record");
+		} else {
+			Microphone.End (null);
+			araudio.Stop();
+			araudio.loop = false;
+			araudio.mute = true;
+			araudio.clip = Microphone.Start(null, false, 10, sFrequency);    
+			Debug.Log ("start record");
+		}
+
+	}
+
+	public void XHRecordPlay()
+	{
+		if (Microphone.IsRecording(null))
+		{
+			return;
+		}
+		if (araudio.clip == null)
+		{
+			return;
+		}
+		araudio.mute = false;
+		araudio.loop = false;
+		araudio.Play();
+	}
+
 
 	// Speak
 	public void UnityState(string content) {
@@ -121,29 +145,6 @@ public class UIManager : Singleton<UIManager> {
 	public void AddLBSMap(){
 		#if !UNITY_EDITOR
 		XHLBSMap ();
-		#endif
-	}
-
-
-	// 录音播放
-	public void XHRecordInit(){
-		#if !UNITY_EDITOR
-		XHAudioRecordInit();
-		#endif
-	}
-	public void XHRecordStart(){
-		#if !UNITY_EDITOR
-		XHAudioRecordStart();
-		#endif
-	}
-	public void XHRecordStop(){
-		#if !UNITY_EDITOR
-		XHAudioRecordStop();
-		#endif
-	}
-	public void XHRecordPlay(){
-		#if !UNITY_EDITOR
-		XHAudioRecordPlay();
 		#endif
 	}
 

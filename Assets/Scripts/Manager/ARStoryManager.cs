@@ -5,28 +5,26 @@ using Vuforia;
 
 public class ARStoryManager : MonoBehaviour {
 
-	public TrackableImageTarget target;
 	int storyIndex = 0;
 	public AudioClip[] stories;
-	AudioSource audio = null;
+	public GameObject ARObjects;
+	AudioSource storyaudio = null;
 	// Use this for initialization
 	void Start () {
-		audio = GetComponent<AudioSource> ();
+		storyaudio = GetComponent<AudioSource> ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (target.isARFound) {
-			UIManager.Ins.PlayStory (storyIndex);
-			storyIndex++;
-		} else {
-			UIManager.Ins.StopAudioPlay ();
+		if (ARObjects.activeSelf && !storyaudio.isPlaying) {
+			PlayStory ();
 		}
 	}
 
-	public void PlayStory(){
-		audio.clip = stories[0];
-		audio.Play ();
+	void PlayStory(){
+		storyIndex += (storyIndex+1)%stories.Length;
+		storyaudio.clip = stories[storyIndex];
+		storyaudio.Play ();
 	}
 
 	public void OnHome(){

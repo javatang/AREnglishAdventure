@@ -8,7 +8,6 @@
 
 #import "XFSDK.h"
 #import "AudioRecord.h"
-#import "MapViewController.h"
 #import <JXHSDK/SDK.h>
 
 extern "C" void XFSpeak(const char *people, const char *content) {
@@ -64,7 +63,4 @@ extern "C" void XHLogin() {
 // 添加地图
 extern "C" void XHLBSMap(){
     UIViewController *unityRootVC = UnityGetGLViewController();
-    MapViewController *mapVC = [[MapViewController alloc] init];
-    [unityRootVC addChildViewController:mapVC];
-    [unityRootVC.view addSubview:mapVC.view];
 }

@@ -6,25 +6,40 @@ using Vuforia;
 
 public class ARSchoolManager : MonoBehaviour {
 	public Text dialogText;
-	public TrackableImageTarget target;
+	public GameObject recording;
+	public GameObject ARObjects;
 	public AudioClip[] dialogs;
-	AudioSource audio = null;
+	AudioSource schoolaudio = null;
+
 	// Use this for initialization
 	void Start () {
-		audio = GetComponent<AudioSource> ();
+		schoolaudio = GetComponent<AudioSource> ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (target.isARFound) {
-		} else {
+		if (ARObjects.activeSelf && !schoolaudio.isPlaying) {
+			schoolaudio.Play ();
 		}
 	}
 
+	public void XHRecord() {
+		if (Microphone.IsRecording (null)) {
+			recording.SetActive (true);
+		} else {
+			recording.SetActive (false);
+		}
+		UIManager.Ins.XHRecordStart ();
+	}
+	public void XHRecordPlay() {
+		UIManager.Ins.XHRecordPlay ();
+	}
+
+
 	public void PlayDialog(){
 		// 说话
-		audio.clip = dialogs[0];
-		audio.Play ();
+		schoolaudio.clip = dialogs[0];
+		schoolaudio.Play ();
 	}
 
 	public void OnHome(){
