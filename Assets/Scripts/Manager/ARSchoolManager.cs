@@ -9,7 +9,8 @@ public class ARSchoolManager : MonoBehaviour {
 	public GameObject recording;
 	public GameObject ARObjects;
 	public AudioClip[] dialogs;
-	AudioSource schoolaudio = null;
+	public AudioSource schoolaudio = null;
+	bool playonetime = true;
 
 	// Use this for initialization
 	void Start () {
@@ -18,27 +19,20 @@ public class ARSchoolManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (ARObjects.activeSelf && !schoolaudio.isPlaying) {
+		if (playonetime && ARObjects.activeSelf && !schoolaudio.isPlaying) {
 			schoolaudio.Play ();
+			playonetime = false;
 		}
-	}
-
-	public void XHRecord() {
-		if (Microphone.IsRecording (null)) {
-			recording.SetActive (true);
-		} else {
-			recording.SetActive (false);
-		}
-		UIManager.Ins.XHRecordStart ();
-	}
-	public void XHRecordPlay() {
-		UIManager.Ins.XHRecordPlay ();
+//		if (!ARObjects.activeSelf && schoolaudio.isPlaying) {
+//			schoolaudio.Stop ();
+//		}
 	}
 
 
 	public void PlayDialog(){
 		// 说话
-		schoolaudio.clip = dialogs[0];
+		//schoolaudio.clip = dialogs[0];
+		schoolaudio.Stop();
 		schoolaudio.Play ();
 	}
 

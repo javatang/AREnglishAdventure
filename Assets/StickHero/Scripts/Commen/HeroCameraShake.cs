@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class HeroCameraShake : MonoBehaviour
 {
+	public bool isShaking = false;
 	private Vector3 originPosition;          //原位置
 	private float shake_decay;               //摇动幅度
 	private float shake_scale;               //衰减幅度
@@ -18,7 +19,7 @@ public class HeroCameraShake : MonoBehaviour
 
 	private void Update()
 	{
-		if ((((Application.loadedLevel == 1) && GameController.gameover) || ((Application.loadedLevel == 2) && PlayerNewController.isDead)) && (this.shake_scale > 0f))
+		if (isShaking && (this.shake_scale > 0f))
 		{
 			//停止背景音乐
 			GetComponent<AudioSource>().Stop();

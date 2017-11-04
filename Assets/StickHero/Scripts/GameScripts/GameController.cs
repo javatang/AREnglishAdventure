@@ -12,6 +12,7 @@ public class GameController : MonoBehaviour
     public GameObject GameoverPlanel;                     //游戏结束面板
     public GameObject PlatformPrefab;                     //平台预设模板
     public GameObject ScoreText;                          //游戏分数显示标签
+	public HeroCameraShake herocamera;
 
     public static bool gameover;                          //游戏结束标志
     public static bool canCreatePlatform;                 //允许创建平台
@@ -141,6 +142,8 @@ public class GameController : MonoBehaviour
     //游戏结束处理
     private IEnumerator processGameover()
     {
+		// 相机震动
+		herocamera.isShaking = true;
         //结算最高成绩：
         int best = PlayerPrefs.GetInt("game_best");
         if (score > best)

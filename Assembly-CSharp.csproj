@@ -169,6 +169,7 @@
      <Compile Include="Assets\Scripts\Commen\MovieCamera.cs" />
      <Compile Include="Assets\Scripts\Commen\NAVButtonsControl.cs" />
      <Compile Include="Assets\Scripts\Commen\PlayerMove.cs" />
+     <Compile Include="Assets\Scripts\Commen\RecordButton.cs" />
      <Compile Include="Assets\Scripts\Commen\TextRecogLineRender.cs" />
      <Compile Include="Assets\Scripts\Commen\TimerReactive.cs" />
      <Compile Include="Assets\Scripts\Commen\TrackableImageTarget.cs" />

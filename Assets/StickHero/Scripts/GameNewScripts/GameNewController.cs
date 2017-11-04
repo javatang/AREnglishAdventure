@@ -20,6 +20,7 @@ public class GameNewController : MonoBehaviour {
     private GameObject Melon1;                            //西瓜1
     private GameObject Melon2;                            //西瓜2
     public GameObject ScoreText;                          //游戏分数显示标签
+	public HeroCameraShake herocamera;
 
     public static bool gameover;                          //游戏结束标志
     public static bool canCreatePlatform;                 //允许创建平台
@@ -248,6 +249,7 @@ public class GameNewController : MonoBehaviour {
     //游戏结束处理
     private IEnumerator processGameover()
     {
+		herocamera.isShaking = true;
         //结算最高成绩：
         int best = PlayerPrefs.GetInt("gamenew_best");
         if (score > best) {
