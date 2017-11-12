@@ -86,14 +86,17 @@ public class UIManager : Singleton<UIManager> {
 	}
 
 
-	public void XHRecordStart()
+	public void XHRecordStop()
 	{
 		Microphone.End(null);
 		araudio.Stop();
 		Debug.Log ("stop record");
 	}
-	public void XHRecordStop(){
-		Microphone.End (null);
+	public void XHRecordStart(){
+		if (Microphone.IsRecording(null))
+		{
+			return;
+		}
 		araudio.Stop();
 		araudio.loop = false;
 		araudio.mute = true;

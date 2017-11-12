@@ -25,7 +25,7 @@ public class RecordButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
 				lastInvokeTime = Time.time;  
 				Debug.Log("long press"); 
 
-				UIManager.Ins.XHRecordPlay ();
+				UIManager.Ins.XHRecordStart ();
 			}  
 		}
 	}  
@@ -48,6 +48,7 @@ public class RecordButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
 
 		if (Microphone.IsRecording (null)) {
 			UIManager.Ins.XHRecordStop ();
+			UIManager.Ins.XHRecordPlay ();
 		}
 	}  
 

@@ -162,7 +162,6 @@
      <Compile Include="Assets\Resources\Model\UnityChan\Scripts\SceneLoader.cs" />
      <Compile Include="Assets\Resources\Model\UnityChan\Scripts\ThirdPersonCamera.cs" />
      <Compile Include="Assets\Resources\Model\UnityChan\Scripts\UnityChanControlScriptWithRgidBody.cs" />
-     <Compile Include="Assets\Scripts\Commen\Bullet.cs" />
      <Compile Include="Assets\Scripts\Commen\DragRotate.cs" />
      <Compile Include="Assets\Scripts\Commen\Loading.cs" />
      <Compile Include="Assets\Scripts\Commen\Logo.cs" />
